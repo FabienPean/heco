@@ -1,0 +1,4 @@
+# for i in {1..9}; do ./script.txt "get/$i"; done 
+s="${2:-out}"        # ${2:-all} means argument 1 if exists otherwise default to out
+s=`echo $s | tr / _` # replace slash by underscore for getting a valid filename
+$1 --v=0 --benchmark_filter=${2:-all} --benchmark_out=out_${s}.json --benchmark_out_format=json --benchmark_repetitions=11 --benchmark_display_aggregates_only=true --benchmark_report_aggregates_only=false
