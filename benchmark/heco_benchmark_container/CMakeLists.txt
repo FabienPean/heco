@@ -23,5 +23,3 @@ else()
 endif()
 endif()
 
-add_executable(test test.cpp)
-target_compile_features(test PRIVATE cxx_std_17)
